@@ -1,0 +1,219 @@
+/* src/components/Jobs.css */
+
+.containers {
+  /* max-width: 100%;
+  margin: 0 auto; */
+  height: 120vh;
+  background: linear-gradient(to bottom, #292828, #333333, #000000);
+}
+
+.job-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  position: relative;
+  top: -1rem;
+}
+
+.both{
+  display: flex;
+  justify-content: flex-start;
+  gap: 4rem;
+
+}
+
+.job-card {
+  box-sizing: border-box;
+  width: 34%; /* Two items per row with a little space in between */
+  margin-top: 2rem;
+  margin-bottom: 20px;
+  padding: 15px; /* Smaller padding for a smaller box */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.job-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow effect and a subtle box shadow on hover */
+}
+
+.job-title {
+  font-size: 16px; /* Slightly smaller font size */
+  margin-bottom: 8px;
+}
+
+.job-info {
+  font-size: 12px; /* Slightly smaller font size */
+  margin-bottom: 10px;
+}
+
+.job-image {
+  width: 22%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: contain;
+}
+
+/* Jobs.css */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+  list-style: none;
+}
+
+.pagination .page-item {
+  margin: 0 5px;
+}
+
+.pagination .page-link {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  color: #555;
+  padding: 7px 13px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 0 3.5px;
+  background-color: #3b454a;
+    color: white;
+    border-style: none;
+}
+
+.pagination .page-link:hover {
+  
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #4f5350;
+  color: white;
+}
+
+.pagination .prev-next {
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 8px 12px;
+  background-color: #3b454a;
+  color: #fff;
+  
+}
+
+.pagination .prev-next:hover {
+    background-color: #3b454a;
+    border-style: none;
+}
+
+.page-link:hover{
+  background-color: #3b454a;
+}
+
+
+
+.lower-data {
+  margin-top: 10px;
+    display: flex;
+    gap: 4ren;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.ReadMoreButton{
+  background-color: #3498db; /* Set the background color */
+  color: #ffffff; /* Set the text color */
+  padding: 10px 15px; /* Add padding to the button */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Add border radius for rounded corners */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; 
+}
+
+.JobsLocation{
+  display: flex;
+  align-items: baseline;
+  text-align: center;
+  gap: 10px;
+}
+
+
+.jobsbtncolor{
+  background-color: #d4dbd6 !important;
+  font-weight: 500;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+
+.filter-controls {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.filter-controls button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  background-color: #3b454a;
+  color: white;
+  outline: none;
+}
+.filter-controls button.active {
+  background-color: #171817;
+}
+
+.visually-hidden{
+  display: none;
+}
+
+
+/* Media query for screens up to 360px (Samsung Galaxy S8 width) */
+/* @media (max-width: 768px) 
+{
+  .containers{
+    height: 100%;
+  }
+
+  .job-card {
+    width: 90%; 
+  }
+
+  .job-title {
+    font-size: 14px; 
+  }
+
+  .job-info {
+    font-size: 10px;
+  }
+
+  .job-image {
+    max-width: 80%; 
+    height: auto;
+    border-radius: 4px;
+  }
+
+  .jobsTogether{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .uiimage{
+    height: 16px;
+    width: 16px;
+  }
+
+  .pagination{
+    position: relative;
+    bottom: 2.5rem;
+    left: -1rem;
+  }
+  
+} */

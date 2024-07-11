@@ -1,0 +1,109 @@
+/* Loader.css */
+.loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+      
+  }
+  
+  .loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 16px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+/* Loading.css */
+.loading-container {
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .loading-text {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: #3498db; /* Set text color to a nice blue */
+    font-weight: bold; /* Make the text bolder */
+  }
+  
+  .loading-spinner {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 8px solid #3498db; /* Increase border-width for a bolder spinner */
+    border-radius: 50%;
+    border-top: 8px solid #ffffff; /* Increase border-width for a bolder spinner */
+    animation: spin 1.5s linear infinite, fadeIn 1s ease-out; /* Added fadeIn animation */
+  }
+  
+  .stars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow user interactions to pass through the stars */
+  }
+  
+  .star {
+    position: absolute;
+    width: 115px;
+    height: 115px;
+    background-color: #3498db; /* Star color, in this case, yellow */
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: scatter 10s ease-out forwards; /* Scatter animation */
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @keyframes scatter {
+    0% {
+      opacity: 0;
+      transform: translateY(0) translateX(0) rotate(0deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(-100vh) translateX(calc(-50% + 25px)) rotate(720deg); /* Move stars upward and rotate */
+    }
+  }
+  
+  /* Media query for smaller screens like Pixel 7 */
+  @media screen and (max-width: 600px) {
+    .loading-text {
+      font-size: 18px;
+    }
+  
+    .loading-spinner {
+      width: 30px;
+      height: 30px;
+      border-width: 4px; /* Increase border-width for a bolder spinner on smaller screens */
+    }
+  
+    .star {
+      width: 200px;
+      height: 201px;
+    }
+  }
+    

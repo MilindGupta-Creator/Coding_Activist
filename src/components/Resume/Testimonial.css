@@ -1,0 +1,105 @@
+/* Add some basic styles to the testimonial container */
+.testimonial {
+    position: relative;
+    max-width: 17rem;
+    height: fit-content;
+    margin: auto;
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .testi_head{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    text-align: center;
+    color: #091e42;
+    padding: 10px;
+    margin-bottom: 10px
+  }
+
+  .testimonials_title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #091e42;
+    width: 93%;
+    display: block;
+  }
+
+  .testimonials_desc{
+    display: flex;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #565a5c;
+    margin: 8px 0 16px;
+  }
+  
+  /* Style for the author name */
+  .testimonial .author {
+    font-style: italic;
+    margin-top: 15px;
+    color: #555;
+  }
+  
+  /* Style for the navigation buttons */
+  .testimonial button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  /* Disable button styles */
+  .testimonial button:disabled {
+    /* background-color: #ccc; */
+    cursor: not-allowed;
+  }
+  .testimonial .arrow {
+    position: absolute;
+    top: 40%;
+    font-size: 28px;
+    color: #007bff;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    transition: color 0.3s;
+  }
+  .testimonial .arrow:hover {
+    color: #0056b3;
+  }
+  
+  /* Disable arrow styles */
+  .testimonial .arrow:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+  }
+
+  .slick-slider {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Adjust the position of the arrows */
+  .arrow-left {
+    left: 0;
+  }
+  
+  .arrow-right {
+    right: 0;
+  }

@@ -1,0 +1,67 @@
+.practice-container {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; 
+    height: 80vh;
+  }
+
+.practicelinks{
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+ 
+}
+
+.questionslink {
+   color: white;
+   display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3rem;
+  }
+
+.centered-li {
+    color: white;
+    font-weight: 200;
+    letter-spacing: -.025em;
+    line-height: 100%;
+    text-align: center; /* Center the text within the <li> */
+    background-color:#1b0419; /* Background color */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+    transition: box-shadow 0.3s ease; /* Smooth transition for box shadow */
+    width: 25rem;
+    font-size: 2.25rem;
+    scroll-margin: 5rem;
+    text-decoration: none; /* Remove underline */
+    padding: 10px 20px; /* Add padding */
+    
+  cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+
+    .practice-container {
+      height: 85vh; /* Adjust height to fit content */
+    }
+
+    .practicelinks {
+      flex-direction: column; /* Change flex direction to row */
+      gap: 2rem; /* Reduce gap between items */
+      margin-top: 20px; /* Increase top margin */
+    }
+
+    .centered-li {
+      width: auto; /* Adjust width to fit content */
+      padding: 20px; /* Adjust padding */
+      font-size: 1.5rem; /* Reduce font size */
+    }
+
+    
+
+  }

@@ -1,0 +1,256 @@
+/* src/components/JobDetails.css */
+
+.details-container {
+  background: linear-gradient(to bottom, #000000, #333333, #000000);
+  color: #ffffff; /* Set text color to contrast with the gradient */
+  padding: 20px; /* Add padding for better spacing */
+}
+.job-details-container {
+  max-width: 1200px;
+  margin-top: -10px;
+  margin-right: auto;
+  margin-bottom: 130px;
+  margin-left: auto;
+  /* padding: 20px; */
+}
+
+.jobDetailsJobRole {
+  font-size: 33px;
+  color: #000000;
+  margin-top: 0.6rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  color: #6e6e73;
+  margin-left: -2.6rem;
+}
+
+.skills-lists {
+  /* display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  color: #6e6e73; */
+  margin-left: -2rem;
+}
+
+.skillslabel {
+  line-height: 1;
+  vertical-align: baseline;
+  margin: 0 0.14285714em;
+  background-color: #e8e8e8;
+  background-image: none;
+  padding: 0.5833em 0.833em;
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: none;
+  font-weight: 700;
+  border: 0 solid transparent;
+  border-radius: 0.28571429rem;
+  transition: background 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.skillslabels {
+  line-height: 1;
+  vertical-align: baseline;
+  margin: 0 0.14285714em;
+  
+  background-image: none;
+  padding: 0.1em 0.3em;
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: none;
+  border: 0 solid transparent;
+  border-radius: 0.28571429rem;
+  transition: background 0.2s ease;
+  
+}
+
+.jobdetailsrightside {
+  background-color: #f5f5f7;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.upperpartJobDetails {
+  display: flex;
+  justify-content: space-between;
+}
+
+.upperpartJobDetailsRight {
+  background-color: #ececf4;
+  padding: 15px;
+  border-radius: 5px;
+  position: relative;
+  right: 8rem;
+  height: 9rem;
+}
+
+.salaryside {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: baseline;
+  grid-gap: 40px;
+  opacity: 0.8;
+  font-size: 13px;
+  padding: 5px;
+}
+
+.jobtype {
+  display: flex;
+  align-items: baseline;
+  grid-gap: 40px;
+  opacity: 0.8;
+  font-size: 14px;
+  padding: 7px;
+}
+
+.apply-button {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #4caf50; /* Green color, change as needed */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 25px; /* Adjust the margin as needed */
+  margin-left: 25px;
+  cursor: pointer;
+  /* Add any additional styling as needed */
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background: linear-gradient(
+    to right,
+    #4f4848,
+    #494040,
+    #544d4d
+  );
+  color: #e7d5d5;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Add box shadow for a subtle lift effect */
+  
+}
+
+.back-button:hover {
+  background-color: #2a75af; /* Change background color on hover */
+  cursor: pointer;
+}
+
+.job-details {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.job-details h2 {
+  margin-bottom: 10px;
+}
+
+.companyDesc{
+  color: #000000;
+  width: 35rem;
+
+}
+.job-image {
+  height: 70px;
+  width: 70px;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.251);
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.job-info {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.job-description {
+  color: #000000;
+  width: 55vw;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.share-section {
+  margin-top: 20px;
+}
+
+.share-button {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #156b1f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.share-button:hover {
+  background-color: #5a9f55;
+}
+.copy-feedback {
+  color: green;
+  margin-left: 10px;
+}
+.Toastify__toast-container {
+  z-index: 9999;
+}
+
+/* @media (max-width: 768px) {
+  .job-details {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   
+   
+  }
+
+  .upperpartJobDetailsRights{
+    background-color: transparent;
+    position: relative;
+    padding: 0;
+    
+  }
+
+  .salaryside{
+      display: inline-flex;   
+      font-size:13px;
+  }
+
+  .jobtype{
+    display: inline-flex;
+  }
+
+  .back-button{
+    position: relative;
+    right: 1.5rem;
+  }
+
+  .companyDesc{
+    color: #000000;
+    width: 18rem;
+  }
+
+  .job-description {
+    color: #000000;
+    width: 85vw;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+} */
