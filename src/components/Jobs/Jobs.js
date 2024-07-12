@@ -4,38 +4,41 @@ import "./Jobs.css";
 import Pagination from "react-bootstrap/Pagination";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
-
+import { CiLocationOn } from "react-icons/ci";
 
 function formatDate(date) {
   const day = date.getDate();
-  const month = date.toLocaleString('default', { month: 'short' });
+  const month = date.toLocaleString("default", { month: "short" });
   const year = date.getFullYear();
-  
+
   const getDaySuffix = (day) => {
-    if (day > 3 && day < 21) return 'th';
+    if (day > 3 && day < 21) return "th";
     switch (day % 10) {
-      case 1: return 'st';
-      case 2: return 'nd';
-      case 3: return 'rd';
-      default: return 'th';
+      case 1:
+        return "st";
+      case 2:
+        return "nd";
+      case 3:
+        return "rd";
+      default:
+        return "th";
     }
   };
 
   return `${day}${getDaySuffix(day)} ${month} ${year}`;
 }
 
-
 const Jobs = () => {
-
   useEffect(() => {
     // Create a new meta tag for viewport
-    const viewportMetaTag = document.createElement('meta');
+    const viewportMetaTag = document.createElement("meta");
     viewportMetaTag.name = "viewport";
-    viewportMetaTag.content = "width=device-width, initial-scale=0.35, maximum-scale=1.0, user-scalable=no";
+    viewportMetaTag.content =
+      "width=device-width, initial-scale=0.35, maximum-scale=1.0, user-scalable=no";
 
     // Append the new meta tag to the head
     document.head.appendChild(viewportMetaTag);
-    
+
     // Clean up function to remove the viewport meta tag when the component unmounts
     return () => {
       document.head.removeChild(viewportMetaTag);
@@ -57,10 +60,10 @@ const Jobs = () => {
         .get();
 
       const data = snapshot.docs.map((doc) => {
-      const docData = doc.data();
-      const createdAt = formatDate(docData.createdAt.toDate()); // Format Firestore Timestamp
-      return { ...docData, id: doc.id, createdAt }; // Add formatted createdAt
-    });
+        const docData = doc.data();
+        const createdAt = formatDate(docData.createdAt.toDate()); // Format Firestore Timestamp
+        return { ...docData, id: doc.id, createdAt }; // Add formatted createdAt
+      });
       setJobsData(data);
       console.log("Fetched jobs data:", data); // Debug log
     };
@@ -94,7 +97,6 @@ const Jobs = () => {
     setFilterType(filter);
     setCurrentPage(1); // Reset to the first page when the filter changes
   };
-  
 
   return (
     <div className="containers">
@@ -126,42 +128,21 @@ const Jobs = () => {
         </button>
       </div>
 
-      
-
-      <div className="job-list">
+      <div className="flex flex-wrap w-3/4 m-auto justify-around gap-4 my-10">
         {currentJobs.map((item) => {
-          console.log("Rendering job with ID:", item.id); // Debug log
           return (
-            <div key={item.id} className="job-card" style={{ padding: "2rem" }}>
-              <div className="both">
-                <img className="job-image" src={item.image} alt={item.name} />
-                <div className="jobsTogether">
-                  <h2 className="job-title">{item.name}</h2>
-                  <h2 className="job-title">{item.role}</h2>
-                  <div className="JobsLocation">
-                    <img
-                      src="https://media.geeksforgeeks.org/img-practice/map-pin-1676956459.png"
-                      alt="Job Location"
-                      className="uiimage"
-                    ></img>
-                    <p className="job-info">{item.address}</p>
-                  </div>
-                </div>
-              </div>
-              <div className="lower-data">
+            <div className="md:w-2/5 w-full border bg-black text-white flex p-4 rounded-md" key={item.id}>
+              <div className="flex flex-col gap-5 justify-between w-1/2">
+                <img src={item.image} className="h-20 w-20 rounded-lg object-contain bg-white"/>
                 <Link to={`/jobs/${item.id}`}>
-                  <button className="ReadMoreButton">Read More</button>
+                <button className="bg-blue-400 px-4 py-2 rounded-lg hover:bg-blue-500 transition-all duration-200">Read more</button>
                 </Link>
-                <p
-                  className="text-gray"
-                  style={{
-                    fontSize: "15px",
-                    position: "relative",
-                    left: "2rem",
-                  }}
-                >
-                  Posted : {item.createdAt}
-                </p>
+              </div>
+              <div className="flex flex-col w-1/2">
+                <p className="text-xl font-bold">{item.name}</p>
+                <p className="text-md">{item.role}</p>
+                <p className="flex items-center"><CiLocationOn />{item.address}</p>
+                <p>Date Posted: {item.createdAt}</p>
               </div>
             </div>
           );

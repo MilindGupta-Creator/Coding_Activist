@@ -77,7 +77,7 @@ function App() {
           <Route path="/practice" element={<Practice/>} />
           <Route path="/jobsfilling" element={<JobsPage/>} />
         </Routes>
-        {/* <BottomComponent/> */}
+        <BottomComponent/>
       </Router>
       <EmailPopup/>
       {/* </UserContextProvider> */}
