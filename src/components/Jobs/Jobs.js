@@ -128,17 +128,17 @@ const Jobs = () => {
         </button>
       </div>
 
-      <div className="flex flex-wrap w-3/4 m-auto justify-evenly gap-4 my-10">
+      <div className="flex flex-wrap w-3/4 m-auto justify-around gap-4 my-10">
         {currentJobs.map((item) => {
           return (
-            <div className="border shadow-[5px_5px_0px_0px_rgba(109,40,217)] bg-black text-white flex gap-10 flex-wrap-reverse p-4 rounded-md" key={item.id}>
-              <div className="flex flex-col gap-5">
-                <img src={item.image} className="h-32 w-32 object-contain"/>
+            <div className="md:w-2/5 w-full border bg-black text-white flex p-4 rounded-md" key={item.id}>
+              <div className="flex flex-col gap-5 justify-between w-1/2">
+                <img src={item.image} className="h-20 w-20 rounded-lg object-contain bg-white"/>
                 <Link to={`/jobs/${item.id}`}>
                 <button className="bg-blue-400 px-4 py-2 rounded-lg hover:bg-blue-500 transition-all duration-200">Read more</button>
                 </Link>
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col w-1/2">
                 <p className="text-xl font-bold">{item.name}</p>
                 <p className="text-md">{item.role}</p>
                 <p className="flex items-center"><CiLocationOn />{item.address}</p>
