@@ -10,9 +10,10 @@
 .job-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   position: relative;
-  top: -1rem;
+  margin: 4rem 0 4rem 0;
+  gap: 2rem;
 }
 
 .both{
